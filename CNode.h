@@ -36,7 +36,7 @@ public:
 		}
 	}
 	virtual ~CNode() {
-
+		std::cout << "Deleting node with value " << data << std::endl;
 		for (int iter = 0; iter < numLinks; iter++) {
 			pointers[iter] = 0;
 		}

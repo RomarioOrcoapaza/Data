@@ -73,33 +73,45 @@ int main() {
 	 * tipos de datos.
 	 */
 	CListSimple<int> mySimpleList;
+	mySimpleList.insert(400);
+	mySimpleList.insert(500);
 	mySimpleList.insert(100);
 	mySimpleList.insert(200);
 	mySimpleList.insert(300); // observar esto !!!!
-	mySimpleList.insert(400);
+	//mySimpleList.insert(400);
 	mySimpleList.insert(500);
+	//mySimpleList.insert(400);
+	mySimpleList.insert(500);
+	//mySimpleList.insert(400);
+	//mySimpleList.insert(400);
+	//mySimpleList.show(std::cout);
+	//mySimpleList.erase(400);
 	mySimpleList.show(std::cout);
 	std::cout << std::endl;
+	std::cout<<mySimpleList.search(410);
+	mySimpleList.clear();
+
+
 	/*
 	 * Pero la verdadera tarea es que las siguientes de lineas de codigo
 	 * funcionen, esto ocurre cuando deseo ingresar otros tipos de datos
 	 * no primitivos (object), el metodo show falla a menos que implementemos una sobrecarga de operador <<
 	 * Esto significa que debemos de sobrecargar el operador por cada clase nueva que queramos insertar.
 	 */
-	CListSimple<object> myObjectSimpleList;
+	/*	CListSimple<object> myObjectSimpleList;
 	myObjectSimpleList.insert(object(100, 100));
 	myObjectSimpleList.insert(object(200, 200));
 	myObjectSimpleList.insert(object(300, 300));
 	myObjectSimpleList.insert(object(400, 400));
 	myObjectSimpleList.insert(object(500, 500));
-	myObjectSimpleList.show(std::cout);
+	 myObjectSimpleList.show(std::cout);*/
 	/*
 	 * El problema se agrava cuando queremos almacenar punteros, el método show imprime las direcciones de memoria de
 	 * los datos, no podemos cambiar la implementación de show para cada tipo de dato sea puntero o no.
 	 * Por ello el método show debe de ser eliminado y reemplazado por iteradores para su recorrido o utilizar un
 	 * metodo show en el nodo que permita la impresion del contenido del nodo
 	 */
-	CListSimple<dato2D*> myDato2DSimpleList;
+	/*CListSimple<dato2D*> myDato2DSimpleList;
 	myDato2DSimpleList.insert(new dato2D(12, 12));
 	myDato2DSimpleList.insert(new dato2D(13, 14));
 	myDato2DSimpleList.insert(new dato2D(15, 16));
@@ -107,7 +119,7 @@ int main() {
 
 	std::map<std::string, object> datos;
 	datos.insert(std::pair<std::string, object>("Primero", object(100, 100)));
-	std::cout << datos["Primero"].getDato1();
+	 std::cout << datos["Primero"].getDato1();*/
 
 	return 0;
 }
