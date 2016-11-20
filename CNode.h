@@ -60,4 +60,23 @@ public:
 	}
 };
 
+
+template<class T>
+class CStackNode: public CNode<T>{
+public:
+	CStackNode(T _data):
+		CNode<T>(_data, 1){
+
+	}
+};
+
+/*template<class T>
+class CQueueNode:public CNode<T>{
+public:
+	CQueueNode(T _data):
+	CNode<T>(_data,1){
+
+	}
+};*/
+
 #endif /* CNODE_H_ */

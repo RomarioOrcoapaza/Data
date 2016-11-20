@@ -72,7 +72,9 @@ int main() {
 	 * pila, cola, lista doblemente enlazada y circular, probar con diversos
 	 * tipos de datos.
 	 */
-	CListSimple<int> mySimpleList;
+
+	//-------Lista--------##########
+	/*CListSimple<int> mySimpleList;
 	mySimpleList.insert(400);
 	mySimpleList.insert(500);
 	mySimpleList.insert(100);
@@ -89,7 +91,7 @@ int main() {
 	mySimpleList.show(std::cout);
 	std::cout << std::endl;
 	std::cout<<mySimpleList.search(410);
-	mySimpleList.clear();
+	mySimpleList.clear();*/
 
 
 	/*
@@ -120,6 +122,35 @@ int main() {
 	std::map<std::string, object> datos;
 	datos.insert(std::pair<std::string, object>("Primero", object(100, 100)));
 	 std::cout << datos["Primero"].getDato1();*/
+
+//---------Pila----------########
+/*	CStack<int> myStack;
+	myStack.insert(400);
+	myStack.insert(500);
+	myStack.insert(100);
+	myStack.insert(200);
+	myStack.show(std::cout);
+	myStack.erase(500);
+	myStack.insert(900);
+	myStack.show(std::cout);
+	std::cout<<myStack.search(100);
+	myStack.clear();*/
+
+
+//--------COLA......#########
+	CQueue<int> myCQueue;
+	myCQueue.insert(400);
+	myCQueue.insert(500);
+	myCQueue.insert(100);
+	myCQueue.insert(200);
+	myCQueue.show(std::cout);
+	myCQueue.erase(500);
+	myCQueue.insert(900);
+	myCQueue.show(std::cout);
+	std::cout<<myCQueue.search(100);
+	myCQueue.clear();
+
+
 
 	return 0;
 }
